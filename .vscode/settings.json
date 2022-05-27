@@ -11,7 +11,8 @@
     "*.lock": true,
     "*.log": true,
     "*.tsbuildinfo": true,
-    ".docusaurus": true
+    ".docusaurus": true,
+    "build": true
   },
   "search.exclude": {
     "yarn.lock": true
