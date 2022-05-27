@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Nocker",
-  tagline: "Dinosaurs are cool",
+  tagline: "フィードバックシステム構築の為のAPIとUIライブラリ",
   url: "https://nocker.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -45,7 +45,7 @@ const config = {
         title: "Nocker",
         logo: {
           alt: "Nocker Logo",
-          src: "img/icon.x192.png",
+          src: "img/nocker.png",
         },
         items: [
           {
@@ -67,24 +67,15 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Pages",
+            // title: "Nocker",
             items: [
-              {
-                label: "Docs",
-                to: "/docs/",
-              },
               {
                 label: "GitHub",
                 href: "https://github.com/nockers/nocker",
               },
-            ],
-          },
-          {
-            title: "Nocker",
-            items: [
               {
                 label: "Storybook",
-                href: "https://storybook.nocker.dev",
+                href: "https://storybook.nocker.dev/?path=/story/nockercard--default",
               },
               {
                 label: "Playground",
@@ -93,7 +84,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Nocker. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Nocker`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -101,7 +92,7 @@ const config = {
       },
       announcementBar: {
         id: "announcementBar",
-        content: `このドキュメントは開発中です。`,
+        content: `2022年6月下旬、リリース予定。`,
       },
       image: "img/icon.x192.png",
     },

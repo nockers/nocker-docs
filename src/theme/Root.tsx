@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material"
-import { useHtmlColorMode } from "@site/src/core/hooks/useHtmlColorMode"
+import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
 import React, { FC, ReactNode } from "react"
 
 type Props = {
@@ -17,6 +17,9 @@ const Root: FC<Props> = (props) => {
   const theme = createTheme({
     palette: {
       mode: colorMode,
+    },
+    typography: {
+      fontFamily: ["'M PLUS 1 Code'", "sans-serif"].join(","),
     },
   })
 

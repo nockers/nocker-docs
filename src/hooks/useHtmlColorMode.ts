@@ -1,4 +1,4 @@
-import { getColorModeValue } from "@site/src/core/hooks/getHtmlColorMode"
+import { getColorModeValue } from "@site/src/hooks/getHtmlColorMode"
 import { useEffect, useState } from "react"
 
 export const useHtmlColorMode = () => {
