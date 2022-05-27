@@ -17,7 +17,7 @@ const config = {
   projectName: "nocker",
   i18n: {
     defaultLocale: "ja",
-    locales: ["ja"],
+    locales: ["en"],
   },
   presets: [
     [
