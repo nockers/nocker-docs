@@ -48,13 +48,24 @@ const config = {
           src: "img/nocker.png",
         },
         items: [
+          // {
+          //   type: "doc",
+          //   docId: "index",
+          //   position: "left",
+          //   label: "Docs",
+          // },
           {
-            type: "doc",
-            docId: "index",
+            type: "docSidebar",
             position: "left",
-            label: "Docs",
+            sidebarId: "widget",
+            label: "Widget",
           },
-
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "system",
+            label: "System",
+          },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://nocker.app",

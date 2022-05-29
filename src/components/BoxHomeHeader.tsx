@@ -24,7 +24,7 @@ export const BoxHomeHeader: FC = () => {
           </Typography>
         </Stack>
         <Stack direction={"row"} justifyContent={"center"} spacing={2}>
-          <Link to="/docs">
+          <Link to="/docs/widget">
             <Button variant={"contained"}>{"スタートガイド"}</Button>
           </Link>
           <Link href={storybookURL}>
