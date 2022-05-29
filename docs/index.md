@@ -17,6 +17,10 @@ UIライブラリだけを用いることも、NockerAPIだけを使用するこ
 
 ウィジェットのサンプルは[Storybook](https://storybook.nocker.dev/?path=/story/nockercard--default)で確認できます。
 
+import { BoxFrameCard } from "@site/src/components/BoxFrameCard"
+
+<BoxFrameCard />
+
 ## NockerAPI
 
 NockerAPIを使用するには、[ログイン](https://nocker.app)してプロジェクトの作成が必要です。
