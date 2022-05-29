@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Nocker",
-  tagline: "フィードバックシステム構築の為のAPIとUIライブラリ",
+  tagline: "アプリのフィードバック機能を構築するAPIとUIライブラリ",
   url: "https://nocker.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -16,7 +16,7 @@ const config = {
   organizationName: "nockers",
   projectName: "nocker",
   i18n: {
-    defaultLocale: "ja",
+    defaultLocale: "en",
     locales: ["en"],
   },
   presets: [

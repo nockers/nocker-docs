@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
-# カード
+# ウィジェット
 
 5 minutes to learn the most important Docusaurus concepts.

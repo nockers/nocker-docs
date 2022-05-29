@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
-# テーマ
+# インストール
 
 5 minutes to learn the most important Docusaurus concepts.
