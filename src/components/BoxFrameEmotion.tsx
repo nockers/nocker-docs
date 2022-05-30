@@ -9,7 +9,7 @@ export const BoxFrameEmotion: FC = () => {
   return (
     <BoxFrame>
       <Fade in>
-        <Box>
+        <Box sx={{ py: 2 }}>
           <NockerProvider>
             <ThemeProvider theme={theme}>
               <NockerEmotion />

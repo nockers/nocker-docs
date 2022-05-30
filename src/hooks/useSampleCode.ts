@@ -30,7 +30,11 @@ return (
       console.log(data)
     }}
   />
-)`
+)
+
+
+
+`
   }
 
   if (type === "EMOTION_FIVE") {
@@ -42,7 +46,11 @@ return (
       console.log(data)
     }}
   />
-)`
+)
+
+
+
+`
   }
 
   if (type === "EMOTION_HAND") {
@@ -54,7 +62,11 @@ return (
       console.log(data)
     }}
   />
-)`
+)
+
+
+
+`
   }
 
   if (type === "EMOTION_LIKE") {
@@ -66,7 +78,11 @@ return (
       console.log(data)
     }}
   />
-)`
+)
+
+
+
+`
   }
 
   return ""

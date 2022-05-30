@@ -11,9 +11,9 @@ UIライブラリだけを用いることも、NockerAPIだけを使用するこ
 
 ウィジェットのUIライブラリを提供しています。
 
-- [HTML](/docs/category/html) - Scriptタグを追加できる静的なサイト向け
-- [Browser](/docs/category/browser) - TypeScriptを用いたWebアプリ向け
-- [React - mui](/docs/category/react---mui) - muiを使用したReactアプリ向け
+- [HTML](/docs/widget/html) - Scriptタグを追加できる静的なサイト向け
+- [Browser β](/docs/widget/browser) - TypeScriptを用いたWebアプリ向け
+- [React - mui](/docs/widget/react-mui) - muiを使用したReactアプリ向け
 
 ウィジェットのサンプルは[Storybook](https://storybook.nocker.dev/?path=/story/nockercard--default)で確認できます。
 

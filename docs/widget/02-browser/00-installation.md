@@ -6,7 +6,7 @@ Npmからブラウザ向けのライブラリ`@nocker/browser`をインストー
 $ yarn add @nocker/browser
 ```
 
-muiを用いたReactアプリの場合は[@nocker/mui](/docs/category/react---mui)が使用できます。
+muiを用いたReactアプリの場合は[@nocker/mui](/docs/widget/react-mui)が使用できます。
 
 ## ウィジェットを試す
 
