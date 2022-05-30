@@ -1,23 +1,22 @@
-import { Box, Grow } from "@mui/material"
-import { PaperFrame } from "@site/src/components/PaperFrame"
+import { Box, Fade, ThemeProvider } from "@mui/material"
+import { createDefaultTheme, NockerEmotion, NockerProvider } from "@nocker/mui"
+import { BoxFrame } from "@site/src/components/BoxFrame"
 import React, { FC } from "react"
 
 export const BoxFrameEmotion: FC = () => {
+  const theme = createDefaultTheme("light")
+
   return (
-    <Box>
-      <PaperFrame>
-        <Grow in timeout={1000}>
-          <Box
-            component={"iframe"}
-            sx={{ display: "block", overflow: "hidden" }}
-            height={266}
-            width={352}
-            src={
-              "https://storybook.nocker.dev/iframe.html?args=&id=nockeremotion--default&viewMode=story"
-            }
-          />
-        </Grow>
-      </PaperFrame>
-    </Box>
+    <BoxFrame>
+      <Fade in>
+        <Box>
+          <NockerProvider>
+            <ThemeProvider theme={theme}>
+              <NockerEmotion />
+            </ThemeProvider>
+          </NockerProvider>
+        </Box>
+      </Fade>
+    </BoxFrame>
   )
 }

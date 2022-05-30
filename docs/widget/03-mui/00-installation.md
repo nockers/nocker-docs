@@ -1,6 +1,6 @@
 # インストール
 
-NpmからReactアプリ向けのライブラリ`@nocker/browser`をインストールします。
+NpmからReactアプリ向けのライブラリ`@nocker/mui`をインストールします。
 
 ```bash
 $ yarn add @nocker/mui

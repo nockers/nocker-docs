@@ -1,4 +1,10 @@
 import { colors, createTheme, ThemeProvider } from "@mui/material"
+import {
+  createConfig,
+  createDefaultTheme,
+  NockerFab,
+  NockerProvider,
+} from "@nocker/mui"
 import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
 import React, { FC, ReactNode } from "react"
 
@@ -73,7 +79,20 @@ const Root: FC<Props> = (props) => {
     },
   })
 
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  const nockerTheme = createDefaultTheme(colorMode)
+
+  const config = createConfig({ projectId: "wkLoRg1EBAq2fh1AFgXMO" })
+
+  return (
+    <ThemeProvider theme={theme}>
+      {props.children}
+      <NockerProvider config={config}>
+        <ThemeProvider theme={nockerTheme}>
+          <NockerFab />
+        </ThemeProvider>
+      </NockerProvider>
+    </ThemeProvider>
+  )
 }
 
 export default Root

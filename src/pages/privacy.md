@@ -1,7 +1,7 @@
 ---
-title: Markdown page example
+title: プライバシー
 ---
 
-# Markdown page example
+# プライバシー
 
 You don't need React to write simple standalone pages.

@@ -7,12 +7,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Nocker",
-  tagline: "アプリのフィードバック機能を構築するAPIとUIライブラリ",
+  tagline: "Webアプリのフィードバック機能を構築するAPIとUIライブラリ",
   url: "https://nocker.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "images/favicon.ico",
   organizationName: "nockers",
   projectName: "nocker",
   i18n: {
@@ -35,18 +35,38 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        gtag: {
+          trackingID: "G-ERHRRG1P64",
+          anonymizeIP: false,
+        },
       },
     ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      /**
+       * https://docusaurus.io/docs/api/themes/configuration#color-mode---dark-mode
+       */
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: false,
+      },
+      image: "images/nocker-social-preview.png",
+      metadata: [{ name: "twitter:card", content: "summary" }],
+      announcementBar: {
+        id: "announcementBar",
+        content: `この製品はまだ開発の段階です。`,
+        backgroundColor: "#01579b",
+        textColor: "#e1f5fe",
+      },
       navbar: {
         title: "Nocker",
         logo: {
           alt: "Nocker Logo",
-          src: "img/nocker.png",
+          src: "images/nocker.png",
         },
+        hideOnScroll: true,
         items: [
           // {
           //   type: "doc",
@@ -58,15 +78,20 @@ const config = {
             type: "docSidebar",
             position: "left",
             sidebarId: "widget",
-            label: "Widget",
+            label: "ウィジェット",
           },
           {
             type: "docSidebar",
             position: "left",
             sidebarId: "system",
-            label: "System",
+            label: "システム",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "ブログ", position: "left" },
+          {
+            href: "https://github.com/nockers/nocker",
+            position: "left",
+            label: "GitHub",
+          },
           {
             href: "https://nocker.app",
             label: "ログイン",
@@ -81,16 +106,12 @@ const config = {
             // title: "Nocker",
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/nockers/nocker",
+                label: "プライバシー",
+                href: "/privacy",
               },
               {
-                label: "Storybook",
-                href: "https://storybook.nocker.dev/?path=/story/nockercard--default",
-              },
-              {
-                label: "Playground",
-                href: "https://sample.nocker.dev",
+                label: "利用規約",
+                href: "/terms",
               },
             ],
           },
@@ -101,11 +122,6 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      announcementBar: {
-        id: "announcementBar",
-        content: `2022年6月下旬、リリース予定。`,
-      },
-      image: "img/icon.x192.png",
     },
 }
 

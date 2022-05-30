@@ -2,7 +2,7 @@ import { Box, Grid, Stack } from "@mui/material"
 import { BoxHomeFeature } from "@site/src/components/BoxHomeFeature"
 import React, { FC } from "react"
 
-export const BoxHomeFeatures: FC = () => {
+export const BoxHomeWidgetFunctions: FC = () => {
   const homeFeatures = [
     {
       title: "すぐに使える",

@@ -33,10 +33,28 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 } */
 
+body {
+  overscroll-behavior: none;
+}
+
 a {
   text-decoration: none !important;
 }
 
 table tr > th:last-child {
   width: 100%;
+}
+
+.nocker-home-code-block {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.nocker-home-code-block > div {
+  height: 100%;
+}
+
+.nocker-home-code-block pre {
+  height: 100%;
 }

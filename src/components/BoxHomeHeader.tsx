@@ -15,7 +15,14 @@ export const BoxHomeHeader: FC = () => {
           <Typography
             component={"h1"}
             variant={"h1"}
-            sx={{ textAlign: "center" }}
+            sx={{
+              textAlign: "center",
+              color: "transparent",
+              letterSpacing: "2px",
+              background:
+                "repeating-linear-gradient(90deg, #b39ddb 0 25%, #90caf9 75% 100%)",
+              backgroundClip: "text",
+            }}
           >
             {siteConfig.title}
           </Typography>
@@ -24,7 +31,7 @@ export const BoxHomeHeader: FC = () => {
           </Typography>
         </Stack>
         <Stack direction={"row"} justifyContent={"center"} spacing={2}>
-          <Link to="/docs/widget">
+          <Link to="/docs/widget/html/installation">
             <Button variant={"contained"}>{"スタートガイド"}</Button>
           </Link>
           <Link href={storybookURL}>
