@@ -19,7 +19,7 @@ export const BoxHomeHeader: FC = () => {
           >
             {siteConfig.title}
           </Typography>
-          <Typography sx={{ textAlign: "center" }}>
+          <Typography sx={{ textAlign: "center", px: 4 }}>
             {siteConfig.tagline}
           </Typography>
         </Stack>
