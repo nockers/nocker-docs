@@ -53,10 +53,10 @@ const config = {
         respectPrefersColorScheme: false,
       },
       image: "images/nocker-social-preview.png",
-      metadata: [{ name: "twitter:card", content: "summary" }],
+      metadata: [{ name: "twitter:card", content: "summary_large_image" }],
       announcementBar: {
         id: "announcementBar",
-        content: `この製品はまだ開発の段階です。`,
+        content: `このドキュメントは開発中です。`,
         backgroundColor: "#01579b",
         textColor: "#e1f5fe",
       },
