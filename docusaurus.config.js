@@ -51,6 +51,7 @@ const config = {
       colorMode: {
         defaultMode: "dark",
         respectPrefersColorScheme: false,
+        disableSwitch: true,
       },
       image: "images/nocker-social-preview.png",
       metadata: [{ name: "twitter:card", content: "summary_large_image" }],
