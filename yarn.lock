@@ -1932,12 +1932,20 @@
     "@sentry/browser" "^7.0.0"
     "@sentry/minimal" "^6.19.7"
 
-"@nocker/mui@^0.4.6":
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/@nocker/mui/-/mui-0.4.6.tgz#285c61ff54da75e1bd14d51f7d0b522d48ffb953"
-  integrity sha512-ycrxs2JmKKu1o/E5qP+NZbgNjUp5JO5UpGg6ryEOgxL5QthGXtyn6QN/X/ynZzeIhaacB460H2zgnsR4JF2x/A==
+"@nocker/client@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@nocker/client/-/client-0.1.21.tgz#06db14f6c2cee562436b3dea605953af2ed4f548"
+  integrity sha512-hzASxhpaEirJtMJHXSMIvJ64/KMLEh8+ezDUCvToZ9FTWzRNqklZdeBnQOeM0DbK/r8vghobTP8E4WR6gWg05Q==
+  dependencies:
+    "@sentry/minimal" "^6.19.7"
+
+"@nocker/mui@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@nocker/mui/-/mui-0.4.7.tgz#baa4ff8e46876d0453c4b69c34f43b7a3a7e4012"
+  integrity sha512-F49e2XNrAyxfHHoZJ5Ry2+R/tLyhbrEfZjtyFkAeVk2lY8lpaGNUgawB1/cwHFPksqF6amRo/DeXU/l+R4HcAQ==
   dependencies:
     "@nocker/client" "^0.1.20"
+    "@sentry/minimal" "^6.19.7"
     html2canvas "^1.4.1"
     react-transition-group "^4.4.2"
 
