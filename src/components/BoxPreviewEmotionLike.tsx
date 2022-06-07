@@ -4,14 +4,14 @@ import {
   NockerEmotionLike,
   NockerProvider,
 } from "@nocker/mui"
-import { BoxFrame } from "@site/src/components/BoxFrame"
+import { BoxPreview } from "@site/src/components/BoxPreview"
 import React, { FC } from "react"
 
-export const BoxFrameEmotionLike: FC = () => {
+export const BoxPreviewEmotionLike: FC = () => {
   const theme = createDefaultTheme("light")
 
   return (
-    <BoxFrame>
+    <BoxPreview>
       <Fade in>
         <Box sx={{ py: 2 }}>
           <NockerProvider>
@@ -21,6 +21,6 @@ export const BoxFrameEmotionLike: FC = () => {
           </NockerProvider>
         </Box>
       </Fade>
-    </BoxFrame>
+    </BoxPreview>
   )
 }

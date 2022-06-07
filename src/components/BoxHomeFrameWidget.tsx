@@ -1,10 +1,10 @@
 import { Box, Chip, Grid, Stack } from "@mui/material"
-import { BoxFrame } from "@site/src/components/BoxFrame"
-import { BoxFrameCard } from "@site/src/components/BoxFrameCard"
-import { BoxFrameEmotion } from "@site/src/components/BoxFrameEmotion"
-import { BoxFrameEmotionHand } from "@site/src/components/BoxFrameEmotionHand"
-import { BoxFrameEmotionLike } from "@site/src/components/BoxFrameEmotionLike"
-import { BoxFrameTicket } from "@site/src/components/BoxFrameTicket"
+import { BoxPreview } from "@site/src/components/BoxPreview"
+import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
+import { BoxPreviewEmotion } from "@site/src/components/BoxPreviewEmotion"
+import { BoxPreviewEmotionHand } from "@site/src/components/BoxPreviewEmotionHand"
+import { BoxPreviewEmotionLike } from "@site/src/components/BoxPreviewEmotionLike"
+import { BoxPreviewTicket } from "@site/src/components/BoxPreviewTicket"
 import { useSampleCode } from "@site/src/hooks/useSampleCode"
 import CodeBlock from "@theme/CodeBlock"
 import React, { FC, useState } from "react"
@@ -80,14 +80,14 @@ export const BoxHomeFrameWidget: FC = () => {
           sx={{ width: "100%" }}
         >
           <Box sx={{ flex: 1, height: "100%" }}>
-            {widgetType === "CARD" && <BoxFrameCard />}
-            {widgetType === "TICKET" && <BoxFrameTicket />}
-            {widgetType === "EMOTION_FIVE" && <BoxFrameEmotion />}
-            {widgetType === "EMOTION_HAND" && <BoxFrameEmotionHand />}
-            {widgetType === "EMOTION_LIKE" && <BoxFrameEmotionLike />}
+            {widgetType === "CARD" && <BoxPreviewCard />}
+            {widgetType === "TICKET" && <BoxPreviewTicket />}
+            {widgetType === "EMOTION_FIVE" && <BoxPreviewEmotion />}
+            {widgetType === "EMOTION_HAND" && <BoxPreviewEmotionHand />}
+            {widgetType === "EMOTION_LIKE" && <BoxPreviewEmotionLike />}
           </Box>
           <Box sx={{ flex: 1, height: "20rem", overflow: "auto" }}>
-            <BoxFrame>
+            <BoxPreview>
               <CodeBlock
                 className={"nocker-home-code-block"}
                 language={"tsx"}
@@ -95,7 +95,7 @@ export const BoxHomeFrameWidget: FC = () => {
               >
                 {sampleCode}
               </CodeBlock>
-            </BoxFrame>
+            </BoxPreview>
           </Box>
         </Stack>
       </Stack>

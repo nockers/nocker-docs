@@ -4,25 +4,37 @@ sidebar_position: 0
 
 # はじめに
 
-Nockerは、フィードバックを送信する為のウィジェットと、フィードバックを管理するNockerAPIを提供しています。
-UIライブラリだけを用いることも、NockerAPIだけを使用することもできます。
+Nockerは、フィードバックを送信する為のWebページ用のUIライブラリです。
+現在は、以下の4種類のウィジェットが利用可能です。
 
-## ウィジェット
+- チケット
+- 5段階評価
+- 2段階評価
+- いいねボタン
 
-ウィジェットのUIライブラリを提供しています。
+それに加えて、これらを組み合わせた2種類のウィジェットが存在します。
 
-- [HTML](/docs/widget/html) - Scriptタグを追加できる静的なサイト向け
-- [Browser β](/docs/widget/browser) - TypeScriptを用いたWebアプリ向け
-- [React - mui](/docs/widget/react-mui) - muiを使用したReactアプリ向け
+- カード型
+- FAB型
 
-ウィジェットのサンプルは[Storybook](https://storybook.nocker.dev/?path=/story/nockercard--default)で確認できます。
+ウィジェットのサンプルは[Storybook](https://mui.storybook.nocker.dev/?path=/story/nockercard--default)で確認できます。
 
-import { BoxFrameCard } from "@site/src/components/BoxFrameCard"
+import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
 
-<BoxFrameCard />
+<BoxPreviewCard />
 
-## NockerAPI
+## ライブラリ
 
-NockerAPIを使用するには、[ログイン](https://nocker.app)してプロジェクトの作成が必要です。
+各プラットフォームに向けたUIライブラリを提供しています。
 
-[https://nocker.app](https://nocker.app)
+- [HTML](/docs/widget/html) - Scriptタグで使用する静的なサイト向けのライブラリ
+- [JavaScript](/docs/widget/browser) - Webアプリ向けのライブラリ
+- [React](/docs/widget/react) - Reactコンポーネント
+- [React - mui](/docs/widget/react-mui) - muiのReactコンポーネント
+- ~~[React - Chakra UI](/docs/widget/react-chakra-ui) - Chakra UIのReactコンポーネント~~
+
+
+## Nocker API
+
+Nockerは送信されたフィードバックを管理する為のNockerAPIを提供しています。
+UIライブラリだけを用いることも、NockerAPI だけを使用することもできます。

@@ -1,79 +1,83 @@
 # ウィジェット
 
-ライブラリ「nock」は4種類のウィジェットを提供します。
+ライブラリ「nock」は2種類のウィジェットを提供しています。
 
-## FAB
+- チケット
+- 5段階評価（エモーション）
+
+
+## FAB型（Floating Action Button）
+
+画面の右下に固定されるFAB型のボタンをレンダリングします。
 
 ```html
-<head>
-  <script async src="//widget.nocker.app"></script>
+<body>
   <script>
     window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
     window.nock("render")
   </script>
-</head>
+  <script async src="https://widget.nocker.app"></script>
+</body>
 ```
 
-## カード
+## カード型
+
+指定したDOMの子要素にカード型のウィジェットをレンダリングします。
 
 ```html
-<head>
-  <script async src="//widget.nocker.app"></script>
+<body>
   <script>
     window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
     window.nock("renderCard", {
       element: document.querySelector(".nocker")
     })
   </script>
-</head>
+  <script async src="https://widget.nocker.app"></script>
+</body>
 ```
 
-import { BoxFrameCard } from "@site/src/components/BoxFrameCard"
+import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
 
-<BoxFrameCard />
+<BoxPreviewCard />
 
 ## チケット
 
+指定したDOMの子要素にチケットのウィジェットをレンダリングします。
+
 ```html
-<head>
-  <script async src="//widget.nocker.app"></script>
-  <script>
-    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-  </script>
-</head>
 <body>
   <div class="nocker"></div>
   <script>
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
     window.nock("renderTicket", {
       element: document.querySelector(".nocker")
     })
   </script>
+  <script async src="https://widget.nocker.app"></script>
 </body>
 ```
 
-import { BoxFrameTicket } from "@site/src/components/BoxFrameTicket"
+import { BoxPreviewTicket } from "@site/src/components/BoxPreviewTicket"
 
-<BoxFrameTicket />
+<BoxPreviewTicket />
 
-## エモーション
+## 5段階評価（エモーション）
+
+指定したDOMの子要素に5段階評価を送信するウィジェットをレンダリングします。
 
 ```html
-<head>
-  <script async src="//widget.nocker.app"></script>
-  <script>
-    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-  </script>
-</head>
 <body>
   <div class="nocker"></div>
   <script>
     window.nock("renderEmotion", {
       element: document.querySelector(".nocker")
     })
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
   </script>
+  <script async src="https://widget.nocker.app"></script>
 </body>
 ```
 
-import { BoxFrameEmotion } from "@site/src/components/BoxFrameEmotion"
+import { BoxPreviewEmotion } from "@site/src/components/BoxPreviewEmotion"
 
-<BoxFrameEmotion />
+<BoxPreviewEmotion />

@@ -1,4 +1,8 @@
 {
-  "plugins": ["@docusaurus"],
-  "extends": ["prettier"]
+  "extends": ["prettier"],
+  "plugins": ["@docusaurus", "import", "unused-imports"],
+  "rules": {
+    "unused-imports/no-unused-imports": "warn",
+    "import/order": ["warn", { "alphabetize": { "order": "asc" } }]
+  }
 }

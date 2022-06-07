@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode
 }
 
-export const BoxFrame: FC<Props> = (props) => {
+export const BoxPreview: FC<Props> = (props) => {
   return (
     <Paper
       sx={{

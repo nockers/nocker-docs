@@ -1,26 +1,22 @@
 import { Box, Fade, ThemeProvider } from "@mui/material"
-import {
-  createDefaultTheme,
-  NockerEmotionHand,
-  NockerProvider,
-} from "@nocker/mui"
-import { BoxFrame } from "@site/src/components/BoxFrame"
+import { createDefaultTheme, NockerProvider, NockerTicket } from "@nocker/mui"
+import { BoxPreview } from "@site/src/components/BoxPreview"
 import React, { FC } from "react"
 
-export const BoxFrameEmotionHand: FC = () => {
+export const BoxPreviewTicket: FC = () => {
   const theme = createDefaultTheme("light")
 
   return (
-    <BoxFrame>
+    <BoxPreview>
       <Fade in>
         <Box sx={{ py: 2 }}>
           <NockerProvider>
             <ThemeProvider theme={theme}>
-              <NockerEmotionHand />
+              <NockerTicket />
             </ThemeProvider>
           </NockerProvider>
         </Box>
       </Fade>
-    </BoxFrame>
+    </BoxPreview>
   )
 }
