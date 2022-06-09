@@ -1,5 +1,5 @@
 import { Box, Fade, ThemeProvider } from "@mui/material"
-import { createDefaultTheme, NockerCard, NockerProvider } from "@nocker/mui"
+import { createDefaultTheme, Widget } from "@nocker/mui"
 import { BoxPreview } from "@site/src/components/BoxPreview"
 import React, { FC } from "react"
 
@@ -10,11 +10,9 @@ export const BoxPreviewCard: FC = () => {
     <BoxPreview>
       <Fade in>
         <Box sx={{ py: 2 }}>
-          <NockerProvider>
-            <ThemeProvider theme={theme}>
-              <NockerCard />
-            </ThemeProvider>
-          </NockerProvider>
+          <ThemeProvider theme={theme}>
+            <Widget />
+          </ThemeProvider>
         </Box>
       </Fade>
     </BoxPreview>

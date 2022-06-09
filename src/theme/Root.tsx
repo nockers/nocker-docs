@@ -1,9 +1,9 @@
 import { colors, createTheme, ThemeProvider } from "@mui/material"
 import {
-  createConfig,
   createDefaultTheme,
-  NockerFab,
+  Nocker,
   NockerProvider,
+  WidgetFab,
 } from "@nocker/mui"
 import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
 import React, { FC, ReactNode } from "react"
@@ -81,14 +81,21 @@ const Root: FC<Props> = (props) => {
 
   const nockerTheme = createDefaultTheme(colorMode)
 
-  const config = createConfig({ projectId: "wkLoRg1EBAq2fh1AFgXMO" })
+  const client = new Nocker({
+    projectId: "wkLoRg1EBAq2fh1AFgXMO",
+    environment: "PRODUCTION",
+  })
+
+  const widgetConfig = {
+    fabText: "ご要望はこちらへ",
+  } as any
 
   return (
     <ThemeProvider theme={theme}>
       {props.children}
-      <NockerProvider config={config}>
+      <NockerProvider client={client}>
         <ThemeProvider theme={nockerTheme}>
-          <NockerFab />
+          <WidgetFab widgetConfig={widgetConfig} />
         </ThemeProvider>
       </NockerProvider>
     </ThemeProvider>

@@ -1,9 +1,5 @@
 import { Box, Fade, ThemeProvider } from "@mui/material"
-import {
-  createDefaultTheme,
-  NockerEmotionHand,
-  NockerProvider,
-} from "@nocker/mui"
+import { createDefaultTheme, WidgetEmotionHand } from "@nocker/mui"
 import { BoxPreview } from "@site/src/components/BoxPreview"
 import React, { FC } from "react"
 
@@ -14,11 +10,9 @@ export const BoxPreviewEmotionHand: FC = () => {
     <BoxPreview>
       <Fade in>
         <Box sx={{ py: 2 }}>
-          <NockerProvider>
-            <ThemeProvider theme={theme}>
-              <NockerEmotionHand />
-            </ThemeProvider>
-          </NockerProvider>
+          <ThemeProvider theme={theme}>
+            <WidgetEmotionHand />
+          </ThemeProvider>
         </Box>
       </Fade>
     </BoxPreview>

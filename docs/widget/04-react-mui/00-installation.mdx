@@ -79,7 +79,7 @@ onError|string|null|エラーが発生した時
 import { createTheme } from "@mui/material"
 import {
   createDefaultTheme,
-  NockerFab,
+  WidgetFab,
   NockerProvider
 } from "@nocker/mui"
 
@@ -88,7 +88,7 @@ const HomePage: FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <NockerFab />
+      <WidgetFab />
     </ThemeProvider>
   )
 }
