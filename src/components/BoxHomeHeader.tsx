@@ -7,7 +7,7 @@ export const BoxHomeHeader: FC = () => {
   const { siteConfig } = useDocusaurusContext()
 
   const storybookURL =
-    "https://mui.storybook.nocker.dev/?path=/story/nockercard--default"
+    "https://mui.storybook.nocker.dev/?path=/story/widget--default"
 
   return (
     <Box component={"header"} sx={{ py: 16 }}>

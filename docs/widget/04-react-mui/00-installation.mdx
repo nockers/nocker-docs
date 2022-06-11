@@ -15,27 +15,27 @@ $ yarn add @mui/material @mui/lab @mui/icons-material @emotion/react @emotion/st
 
 ## ウィジェットを試す
 
-Nockerには、6種類のウィジェットが存在します。ここでは、そのうち`NockerFab`を用いて、画面の右下にFAB（固定ボタン）を表示します。
+Nockerには、6種類のウィジェットが存在します。ここでは、そのうち`Widget`を用いて、画面の右下にFAB（固定ボタン）を表示します。
 
-その他のウィジェットは[こちら](https://storybook.nocker.dev/?path=/story/nockercard--default)で確認できます。
+その他のウィジェットは[こちら](https://mui.storybook.nocker.dev/?path=/story/widget--default)で確認できます。
 
 ```tsx
-import { NockerFab } from '@nocker/mui'
+import { Widget } from '@nocker/mui'
 
 const HomePage: FC = () => {
   return (
-    <NockerFab />
+    <Widget />
   )
 }
 ```
 
-ユーザが送信したフォームの内容を取得するには、NockerFabの`onSubmitTicket`にコールバック関数を渡します。
+ユーザが送信したフォームの内容を取得するには、Widgetの`onSubmitTicket`にコールバック関数を渡します。
 
 ```tsx
 import { createTheme } from "@mui/material"
 import {
   createDefaultTheme,
-  NockerFab,
+  Widget,
   type WidgetEmotionSubmit,
   type WidgetTicketSubmit
 } from '@nocker/mui'
@@ -54,7 +54,7 @@ const HomePage: FC = () => {
   }
 
   return (
-    <NockerFab
+    <Widget
       onSubmitEmotion={onSubmitEmotion}
       onSubmitTicket={onSubmitTicket}
       onError={onError}
@@ -63,7 +63,7 @@ const HomePage: FC = () => {
 }
 ```
 
-### NockerFab Props
+### Widget Props
 
 Name|Type|Default|Description
 :--|:--|:--|:--
@@ -71,7 +71,7 @@ onSubmitEmotion|string|null|評価がタップした時
 onSubmitTicket|string|null|お問い合わせが送信された時
 onError|string|null|エラーが発生した時
 
-### テーマを適用する
+## テーマを適用する
 
 関数`createDefaultTheme`を用いてNockerの用意するデフォルトのテーマを適用できます。
 
@@ -79,7 +79,7 @@ onError|string|null|エラーが発生した時
 import { createTheme } from "@mui/material"
 import {
   createDefaultTheme,
-  WidgetFab,
+  Widget,
   NockerProvider
 } from "@nocker/mui"
 
@@ -88,7 +88,7 @@ const HomePage: FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <WidgetFab />
+      <Widget />
     </ThemeProvider>
   )
 }
@@ -101,7 +101,7 @@ const yourTheme = createTheme({})
 
 return (
   <ThemeProvider theme={yourTheme}>
-    <NockerFab />
+    <Widget />
   </ThemeProvider>
 )
 ```
@@ -126,11 +126,11 @@ const mergedThemeOptions = deepmerge(defaultThemeOptions, yourThemeOptions)
 const theme = createTheme(mergedThemeOptions)
 ```
 
-#### 参考
+### 参考
 
 - [Theming - Material UI](https://mui.com/material-ui/customization/theming/#api)
 
-### フォントを設定する
+## フォントを設定する
 
 Nockerはデフォルトで「M PLUS 1p」を使用しています。Googleフォントを読み込むには`<link>`タグを追加してください。
 
@@ -147,7 +147,7 @@ Nockerはデフォルトで「M PLUS 1p」を使用しています。Googleフ�
 ```tsx
 import { createTheme } from "@mui/material"
 import {
-  NockerFab,
+  Widget,
   NockerProvider
 } from "@nocker/mui"
 
@@ -159,12 +159,12 @@ const yourTheme = createTheme({
 
 return (
   <ThemeProvider theme={yourTheme}>
-    <NockerFab />
+    <Widget />
   </ThemeProvider>
 )
 ```
 
-### ウィジェットの設定を変更する
+## ウィジェットの設定を変更する
 
 上層のコンポーネントで`NockerProvider`を用いて、ウィジェットの設定を変更します。
 
@@ -189,7 +189,9 @@ const Root: FC = () => {
 Nockerはフィードバックを管理する為のNockerAPIを提供しています。
 NockerAPIを使用するには事前に[ログイン](https://nocker.app)とプロジェクトの作成が必要です。
 
+:::caution
 APIを使用しない場合はこのセクションは必要ありません。
+:::
 
 ### プロジェクトを設定する
 
