@@ -172,7 +172,7 @@ return (
 import { NockerProvider, WidgetConfig } from "@nocker/mui"
 
 const Root: FC = () => {
-  const widgetConfig: WidgetConfig = {
+  const widgetConfig: Partial<WidgetConfig> = {
     fabText: "こんにちは"
   }
 
@@ -199,13 +199,13 @@ APIを使用しない場合はこのセクションは必要ありません。
 この「projectId」はプロジェクトIDで管理画面で確認できます。
 
 ```tsx
-import { createConfig, NockerProvider } from '@nocker/mui'
+import { Nocker, NockerProvider } from '@nocker/mui'
 
 const Root: FC = () => {
-  const config = createConfig({ projectId: "<YOUR_PROJECT_ID>" })
+  const client = new Nocker({ projectId: "<YOUR_PROJECT_ID>" })
 
   return (
-    <NockerProvider config={config}>
+    <NockerProvider client={client}>
       <App />
     </NockerProvider>
   )
@@ -215,9 +215,9 @@ const Root: FC = () => {
 Knocker以外のAPIと接続する場合は`baseURL`を設定してください。
 
 ```tsx
-import { createConfig, NockerProvider } from '@nocker/mui'
+import { Nocker, NockerProvider } from '@nocker/mui'
 
-const config = createConfig({
+const client = new Nocker({
   projectId: "xxxxxxxxxxxxxxxxxxxxx",
   environment: "PRODUCTION",
   baseURL: "<YOUR_API_ENDPOINT>"
