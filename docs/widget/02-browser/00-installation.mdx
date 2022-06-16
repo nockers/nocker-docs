@@ -10,14 +10,14 @@ muiを用いたReactアプリの場合は[@nocker/mui](/docs/widget/react-mui)�
 
 ## ウィジェットを試す
 
-メソッド`render`を実行して、画面の右下にFAB（固定ボタン）を表示します。
+メソッド`renderWidgetFab`を実行して、画面の右下にFAB（固定ボタン）を表示します。
 
 その他のウィジェットは[こちら](https://mui.storybook.nocker.dev/?path=/story/widget--default)で確認できます。
 
 ```tsx
 import { nocker } from '@nocker/browser'
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 ユーザが送信したフォームの内容を取得するには、NockerFabの`onSubmitTicket`にコールバック関数を渡します。
@@ -25,7 +25,7 @@ nocker.render()
 ```tsx
 import { nocker } from '@nocker/browser'
 
-nocker.render({
+nocker.renderWidgetFab({
   onSubmitEmotion(emotion) {
     console.log(emotion)
   },
@@ -60,7 +60,7 @@ nocker.setTheme({
   }
 })
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 テーマを設定しない場合はデフォルトのテーマが使用されます。
@@ -88,7 +88,7 @@ nocker.setTheme({
   }
 })
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 ### ウィジェットの設定を変更する
@@ -102,7 +102,7 @@ nocker.setWidgetConfig({
   fabText: "こんにちは",
 })
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 ## NockerAPIを使用する場合
@@ -125,7 +125,7 @@ nocker.login({
   environment: "PRODUCTION",
 })
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 Knocker以外のAPIと接続する場合は`baseURL`を設定してください。
@@ -139,7 +139,7 @@ nocker.login({
   baseURL: "<YOUR_API_ENDPOINT>"
 })
 
-nocker.render()
+nocker.renderWidgetFab()
 ```
 
 ### login Options

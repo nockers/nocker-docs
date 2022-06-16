@@ -1999,31 +1999,39 @@
     react-transition-group "^4.4.2"
     rifm "^0.12.1"
 
-"@nocker/client@^0.1.26":
-  version "0.1.26"
-  resolved "https://registry.yarnpkg.com/@nocker/client/-/client-0.1.26.tgz#276523d2a5a6541e12b3eb95d68c2511a42802c8"
-  integrity sha512-2jQfJIVXGe+Y1iXklcvaVTUg60tp39Q1Bn0j0Me95WiffTDBNXC3xCW8+887UZd7mns9UbXEYcezNL2v8HIOcw==
+"@nocker/client@^0.1.27":
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/@nocker/client/-/client-0.1.27.tgz#52f5ac5ebea44d82766fce592c09bbfe45160462"
+  integrity sha512-XgTo0xvQBq7akz8f0LiTz7cWyNDFWWuN/rbd0MmcdkopiCsC6EpPJEIK83wjDii95iQQJ5N9oq9JCcSZcqMbmQ==
   dependencies:
+    "@nocker/core" "^0.1.0"
     "@sentry/hub" "^7.1.0"
 
-"@nocker/mui@^0.4.12":
-  version "0.4.12"
-  resolved "https://registry.yarnpkg.com/@nocker/mui/-/mui-0.4.12.tgz#f4c2fd8243172e991ab9db26213bf9fd5858af21"
-  integrity sha512-KiMyeOWJN2yRANIL8AM/SAcx33aG4Z5hdk5idJcyIP6kpFhjYvO0tL65jelAruiHke+WerjK/6oEF9AzSP2i2A==
+"@nocker/core@^0.1.0":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@nocker/core/-/core-0.1.3.tgz#4d1539959b2bb1f4716ca5ed3a13a915e5d71eb8"
+  integrity sha512-+KydqhTa8FyCvpTS7Wu8ZwqfBtoeyZem/fUxp6C4cSqU9AaJj+Lt75wEwSgnDZPZZFjwfXx86fBuYx/RJ9ub/Q==
   dependencies:
-    "@nocker/client" "^0.1.26"
-    "@nocker/react" "^0.1.4"
+    zod "^3.17.3"
+
+"@nocker/mui@^0.4.21":
+  version "0.4.21"
+  resolved "https://registry.yarnpkg.com/@nocker/mui/-/mui-0.4.21.tgz#7eb51b3466b0d362c2d2db6cb63047f9ec2810b8"
+  integrity sha512-ORAHCr4nlrKloGGpFj3cqBDiGPolCUDcwiUfjgDKMnqzEw8VFKseAaKhYevLo/zYJg9VP0g8TpFnXPYhTyT9Xw==
+  dependencies:
+    "@nocker/client" "^0.1.27"
+    "@nocker/react" "^0.1.10"
     "@sentry/hub" "^7.1.0"
     html2canvas "^1.4.1"
     react-transition-group "^4.4.2"
 
-"@nocker/react@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@nocker/react/-/react-0.1.4.tgz#693358b444ca140ccf5e4eeb62fef8306b36da44"
-  integrity sha512-N8IXr97LimAfvaLra24pUSMwLnlX/6y8P1Ed5+GSgYZU4P/+5e3EQRzSFwAIsndK7fDa+XpuoZy7+r7R6ci0iA==
+"@nocker/react@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@nocker/react/-/react-0.1.10.tgz#913efde36aa7e627903135968c8aaceafb318bc4"
+  integrity sha512-Fh+v+wz7xDGLB81ruEMF4aHh9aJE38SD+vAzvyohim4iAK3qgu8RSN4/YtueWhMCzc9q77TUQDg7PEEpR3C2XQ==
   dependencies:
     "@mui/material" "^5.8.2"
-    "@nocker/client" "^0.1.26"
+    "@nocker/client" "^0.1.27"
     "@sentry/hub" "^7.1.0"
     clsx "^1.1.1"
     react-icons "^4.4.0"
@@ -10484,6 +10492,11 @@ zlibjs@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/zlibjs/-/zlibjs-0.3.1.tgz#50197edb28a1c42ca659cc8b4e6a9ddd6d444554"
   integrity sha1-UBl+2yihxCymWcyLTmqd3W1ERVQ=
+
+zod@^3.17.3:
+  version "3.17.3"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.17.3.tgz#86abbc670ff0063a4588d85a4dcc917d6e4af2ba"
+  integrity sha512-4oKP5zvG6GGbMlqBkI5FESOAweldEhSOZ6LI6cG+JzUT7ofj1ZOC0PJudpQOpT1iqOFpYYtX5Pw0+o403y4bcg==
 
 zwitch@^1.0.0:
   version "1.0.5"

@@ -49,7 +49,7 @@ import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
   <div class="nocker"></div>
   <script>
     window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-    window.nock("renderTicket", {
+    window.nock("renderWidgetTicket", {
       element: document.querySelector(".nocker")
     })
   </script>
@@ -69,7 +69,7 @@ import { BoxPreviewTicket } from "@site/src/components/BoxPreviewTicket"
 <body>
   <div class="nocker"></div>
   <script>
-    window.nock("renderEmotion", {
+    window.nock("renderWidgetEmotion", {
       element: document.querySelector(".nocker")
     })
     window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])

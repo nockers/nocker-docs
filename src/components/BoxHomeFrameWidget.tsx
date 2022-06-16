@@ -64,7 +64,7 @@ export const BoxHomeFrameWidget: FC = () => {
               }}
             />
           </Grid>
-          <Grid item>
+          {/* <Grid item>
             <Chip
               label={"いいねボタン"}
               color={widgetType === "EMOTION_LIKE" ? "primary" : "default"}
@@ -72,7 +72,7 @@ export const BoxHomeFrameWidget: FC = () => {
                 setWidgetType("EMOTION_LIKE")
               }}
             />
-          </Grid>
+          </Grid> */}
         </Grid>
         <Stack
           direction={{ xs: "column", md: "row" }}
