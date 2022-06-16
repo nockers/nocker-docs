@@ -3,6 +3,7 @@ import {
   createDefaultTheme,
   Nocker,
   NockerProvider,
+  WidgetConfig,
   WidgetFab,
 } from "@nocker/mui"
 import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
@@ -84,11 +85,13 @@ const Root: FC<Props> = (props) => {
   const client = new Nocker({
     projectId: "wkLoRg1EBAq2fh1AFgXMO",
     environment: "PRODUCTION",
+    // baseURL: "http://localhost:3000/api",
   })
 
-  const widgetConfig = {
-    fabText: "ご要望はこちらへ",
-  } as any
+  const widgetConfig: Partial<WidgetConfig> = {
+    fabType: "TEXT_WITH_ICON",
+    fabText: "ご要望はこちら",
+  }
 
   return (
     <ThemeProvider theme={theme}>
