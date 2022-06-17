@@ -31,7 +31,7 @@ const Root: FC<Props> = (props) => {
       },
     },
     typography: {
-      fontFamily: ["'M PLUS 1 Code'", "sans-serif"].join(","),
+      fontFamily: ["'M PLUS 1p'", "sans-serif"].join(","),
     },
     shape: { borderRadius: 10 },
     shadows: [
