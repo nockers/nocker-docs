@@ -7,10 +7,10 @@ type CodeType =
 
 export const useSampleCode = (type: CodeType) => {
   if (type === "CARD") {
-    return `import { NockerCard } from '@nocker/mui'
+    return `import { Widget } from '@nocker/mui'
 
 return (
-  <NockerCard
+  <Widget
     onSubmitTicket={(data) => {
       console.log(data)
     }}
@@ -22,10 +22,10 @@ return (
   }
 
   if (type === "TICKET") {
-    return `import { NockerTicket } from '@nocker/mui'
+    return `import { WidgetTicket } from '@nocker/mui'
 
 return (
-  <NockerTicket
+  <WidgetTicket
     onSubmit={(data) => {
       console.log(data)
     }}
@@ -38,10 +38,10 @@ return (
   }
 
   if (type === "EMOTION_FIVE") {
-    return `import { NockerEmotion } from '@nocker/mui'
+    return `import { WiddgetEmotion } from '@nocker/mui'
 
 return (
-  <NockerEmotion
+  <WiddgetEmotion
     onSubmit={(data) => {
       console.log(data)
     }}
@@ -54,10 +54,10 @@ return (
   }
 
   if (type === "EMOTION_HAND") {
-    return `import { NockerEmotionHand } from '@nocker/mui'
+    return `import { WidgetEmotionHand } from '@nocker/mui'
 
 return (
-  <NockerEmotionHand
+  <WidgetEmotionHand
     onSubmit={(data) => {
       console.log(data)
     }}
@@ -70,10 +70,10 @@ return (
   }
 
   if (type === "EMOTION_LIKE") {
-    return `import { NockerEmotionLike } from '@nocker/mui'
+    return `import { WidgetEmotionLike } from '@nocker/mui'
 
 return (
-  <NockerEmotionLike
+  <WidgetEmotionLike
     onSubmit={(data) => {
       console.log(data)
     }}
