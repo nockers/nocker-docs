@@ -35,9 +35,21 @@ export const BoxHomeHeader: FC = () => {
           <Link to="/docs/widget">
             <Button variant={"contained"}>{"スタートガイド"}</Button>
           </Link>
-          <Link href={storybookURL}>
-            <Button variant={"outlined"}>{"サンプル"}</Button>
-          </Link>
+
+          <Box
+            sx={{
+              borderWidth: 1,
+              borderColor: (theme) => theme.palette.primary.main,
+              borderStyle: "solid",
+              borderRadius: "20px",
+              backgroundColor: (theme) => theme.palette.background.paper,
+              px: 2,
+            }}
+          >
+            <Stack sx={{ justifyContent: "center", height: "100%" }}>
+              <Typography>{"$ yarn add @nocker/mui"}</Typography>
+            </Stack>
+          </Box>
         </Stack>
       </Stack>
     </Box>
