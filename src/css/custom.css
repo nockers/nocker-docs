@@ -8,8 +8,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-monospace: "M PLUS 1 Code", sans-serif;
-  --ifm-font-family-base: "M PLUS 1 Code", sans-serif;
+  --ifm-font-family-monospace: "M PLUS 1p", sans-serif;
+  --ifm-font-family-base: "M PLUS 1p", sans-serif;
   /* --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -35,6 +35,10 @@
 
 body {
   overscroll-behavior: none;
+}
+
+#__docusaurus {
+  overflow-x: hidden;
 }
 
 a {

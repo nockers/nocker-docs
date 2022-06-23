@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github")
 const darkCodeTheme = require("prism-react-renderer/themes/dracula")
+const lightCodeTheme = require("prism-react-renderer/themes/github")
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -49,7 +49,7 @@ const config = {
        * https://docusaurus.io/docs/api/themes/configuration#color-mode---dark-mode
        */
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
         respectPrefersColorScheme: false,
         disableSwitch: true,
       },
@@ -57,9 +57,9 @@ const config = {
       metadata: [{ name: "twitter:card", content: "summary_large_image" }],
       announcementBar: {
         id: "announcementBar",
-        content: `このドキュメントは開発中です。`,
-        backgroundColor: "#01579b",
-        textColor: "#e1f5fe",
+        content: "Under development",
+        backgroundColor: "#90caf9",
+        textColor: "#0d47a1",
       },
       navbar: {
         title: "Nocker",
@@ -77,25 +77,25 @@ const config = {
           // },
           {
             type: "docSidebar",
-            position: "left",
+            position: "right",
             sidebarId: "widget",
-            label: "ウィジェット",
+            label: "WIDGET",
           },
           {
             type: "docSidebar",
-            position: "left",
+            position: "right",
             sidebarId: "system",
-            label: "システム",
+            label: "SYSTEM",
           },
-          { to: "/blog", label: "ブログ", position: "left" },
+          // { to: "/blog", label: "ブログ", position: "left" },
           {
             href: "https://github.com/nockers/nocker",
-            position: "left",
+            position: "right",
             label: "GitHub",
           },
           {
             href: "https://nocker.app",
-            label: "ログイン",
+            label: "LOGIN",
             position: "right",
           },
         ],
