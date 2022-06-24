@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.widget.category.HTML": {
+    "message": "HTML",
+    "description": "The label for category HTML in sidebar widget"
+  },
+  "sidebar.widget.category.HTML.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category HTML in sidebar widget"
+  },
+  "sidebar.widget.category.JavaScript": {
+    "message": "JavaScript",
+    "description": "The label for category JavaScript in sidebar widget"
+  },
+  "sidebar.widget.category.JavaScript.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category JavaScript in sidebar widget"
+  },
+  "sidebar.widget.category.React": {
+    "message": "React",
+    "description": "The label for category React in sidebar widget"
+  },
+  "sidebar.widget.category.React.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category React in sidebar widget"
+  },
+  "sidebar.widget.category.React - mui": {
+    "message": "React - mui",
+    "description": "The label for category React - mui in sidebar widget"
+  },
+  "sidebar.widget.category.React - mui.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category React - mui in sidebar widget"
+  },
+  "sidebar.widget.category.React - Chakra UI": {
+    "message": "React - Chakra UI",
+    "description": "The label for category React - Chakra UI in sidebar widget"
+  },
+  "sidebar.widget.category.React - Chakra UI.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category React - Chakra UI in sidebar widget"
+  },
+  "sidebar.widget.category.Flutter": {
+    "message": "Flutter",
+    "description": "The label for category Flutter in sidebar widget"
+  },
+  "sidebar.widget.category.Flutter.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category Flutter in sidebar widget"
+  }
+}

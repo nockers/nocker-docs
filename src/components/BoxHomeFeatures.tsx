@@ -1,54 +1,93 @@
-import { Box, Grid, Stack } from "@mui/material"
-import { BoxHomeFeature } from "@site/src/components/BoxHomeFeature"
+import CableTwoToneIcon from "@mui/icons-material/CableTwoTone"
+import DesignServicesTwoToneIcon from "@mui/icons-material/DesignServicesTwoTone"
+import InterestsTwoToneIcon from "@mui/icons-material/InterestsTwoTone"
+import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone"
+import { Box, Grid, Stack, Typography } from "@mui/material"
+import { PaperFeature } from "@site/src/components/PaperFeature"
 import React, { FC } from "react"
 
 export const BoxHomeFeatures: FC = () => {
-  const homeFeatures = [
-    {
-      title: "すぐに使える",
-      Svg: require("@site/static/images/undraw_docusaurus_mountain.svg")
-        .default,
-      description: (
-        <>
-          数行のコードですぐに導入できて、テーマや機能のカスタマイズも出来ます。
-        </>
-      ),
-    },
-    {
-      title: "オープンソース",
-      Svg: require("@site/static/images/undraw_docusaurus_tree.svg").default,
-      description: (
-        <>NockerのウィジェットはOSSのライブラリです。無料で利用できます。</>
-      ),
-    },
-    {
-      title: "バックエンド",
-      Svg: require("@site/static/images/undraw_docusaurus_react.svg").default,
-      description: (
-        <>
-          Nockerは送信されたフィードバックを管理する為のAPIと管理画面を提供しています。
-        </>
-      ),
-    },
-  ]
-
   return (
-    <Box component={"section"}>
-      <Stack direction={"column"} alignItems={"center"}>
-        <Box sx={{ maxWidth: "64rem" }}>
-          <Grid container spacing={2} justifyContent={"center"}>
-            {homeFeatures.map((props, i) => (
-              <Grid key={i} item xs={12} md={4}>
-                <BoxHomeFeature
-                  title={props.title}
-                  Svg={props.Svg}
-                  description={props.description}
-                />
-              </Grid>
-            ))}
+    <Stack spacing={4} sx={{ py: 8 }}>
+      <Box sx={{ px: { xs: 2, md: 4 } }}>
+        <Typography
+          component={"h2"}
+          variant={"h3"}
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "2rem", sm: "3rem" },
+          }}
+        >
+          {"Features"}
+        </Typography>
+      </Box>
+      <Box sx={{ px: { xs: 2, md: 4 } }}>
+        <Grid container spacing={2}>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Tickets"}
+              isActive={true}
+              icon={<DesignServicesTwoToneIcon sx={{ display: "block" }} />}
+            />
           </Grid>
-        </Box>
-      </Stack>
-    </Box>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Emotions"}
+              isActive={true}
+              icon={<DesignServicesTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"FAQ"}
+              isActive={false}
+              icon={<SettingsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"NPS"}
+              isActive={false}
+              icon={<CableTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Release Notes"}
+              isActive={false}
+              icon={<InterestsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"News"}
+              isActive={false}
+              icon={<SettingsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Feature Voting"}
+              isActive={false}
+              icon={<SettingsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Chat"}
+              isActive={false}
+              icon={<SettingsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+          <Grid item xs={6} md={4} lg={3}>
+            <PaperFeature
+              title={"Forms"}
+              isActive={false}
+              icon={<SettingsTwoToneIcon sx={{ display: "block" }} />}
+            />
+          </Grid>
+        </Grid>
+      </Box>
+    </Stack>
   )
 }

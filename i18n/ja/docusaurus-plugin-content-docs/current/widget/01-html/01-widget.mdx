@@ -1,0 +1,83 @@
+# ウィジェット
+
+ライブラリ「nock」は2種類のウィジェットを提供しています。
+
+- チケット
+- 5段階評価（エモーション）
+
+
+## FAB型（Floating Action Button）
+
+画面の右下に固定されるFAB型のボタンをレンダリングします。
+
+```html
+<body>
+  <script>
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
+    window.nock("render")
+  </script>
+  <script async src="https://widget.nocker.app"></script>
+</body>
+```
+
+## カード型
+
+指定したDOMの子要素にカード型のウィジェットをレンダリングします。
+
+```html
+<body>
+  <script>
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
+    window.nock("renderCard", {
+      element: document.querySelector(".nocker")
+    })
+  </script>
+  <script async src="https://widget.nocker.app"></script>
+</body>
+```
+
+import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
+
+<BoxPreviewCard />
+
+## チケット
+
+指定したDOMの子要素にチケットのウィジェットをレンダリングします。
+
+```html
+<body>
+  <div class="nocker"></div>
+  <script>
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
+    window.nock("renderWidgetTicket", {
+      element: document.querySelector(".nocker")
+    })
+  </script>
+  <script async src="https://widget.nocker.app"></script>
+</body>
+```
+
+import { BoxPreviewTicket } from "@site/src/components/BoxPreviewTicket"
+
+<BoxPreviewTicket />
+
+## 5段階評価（エモーション）
+
+指定したDOMの子要素に5段階評価を送信するウィジェットをレンダリングします。
+
+```html
+<body>
+  <div class="nocker"></div>
+  <script>
+    window.nock("renderWidgetEmotion", {
+      element: document.querySelector(".nocker")
+    })
+    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
+  </script>
+  <script async src="https://widget.nocker.app"></script>
+</body>
+```
+
+import { BoxPreviewEmotion } from "@site/src/components/BoxPreviewEmotion"
+
+<BoxPreviewEmotion />

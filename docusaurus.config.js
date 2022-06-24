@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -17,7 +18,15 @@ const config = {
   projectName: "nocker",
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "ja"],
+    localeConfigs: {
+      en: {
+        label: "English",
+      },
+      ja: {
+        label: "日本語",
+      },
+    },
   },
   presets: [
     [
@@ -69,12 +78,6 @@ const config = {
         },
         hideOnScroll: true,
         items: [
-          // {
-          //   type: "doc",
-          //   docId: "index",
-          //   position: "left",
-          //   label: "Docs",
-          // },
           {
             type: "docSidebar",
             position: "right",
@@ -87,11 +90,15 @@ const config = {
             sidebarId: "system",
             label: "SYSTEM",
           },
-          // { to: "/blog", label: "ブログ", position: "left" },
+          // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/nockers/nocker",
             position: "right",
             label: "GitHub",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
           },
           {
             href: "https://nocker.app",
@@ -101,17 +108,17 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             // title: "Nocker",
             items: [
               {
-                label: "プライバシー",
+                label: "Privacy Policy",
                 href: "/privacy",
               },
               {
-                label: "利用規約",
+                label: "Terms",
                 href: "/terms",
               },
             ],

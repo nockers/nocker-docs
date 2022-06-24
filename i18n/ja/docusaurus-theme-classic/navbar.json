@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Nocker",
+    "description": "The title in the navbar"
+  },
+  "item.label.WIDGET": {
+    "message": "WIDGET",
+    "description": "Navbar item with label WIDGET"
+  },
+  "item.label.SYSTEM": {
+    "message": "SYSTEM",
+    "description": "Navbar item with label SYSTEM"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.LOGIN": {
+    "message": "LOGIN",
+    "description": "Navbar item with label LOGIN"
+  }
+}

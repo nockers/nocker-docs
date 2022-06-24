@@ -11,10 +11,10 @@ export const BoxPreview: FC<Props> = (props) => {
       sx={{
         height: "100%",
         overflow: "hidden",
-        backgroundColor(theme) {
+        background(theme) {
           return theme.palette.mode === "dark"
             ? colors.grey[800]
-            : colors.blue[100]
+            : "repeating-linear-gradient(125deg, #b39ddb 0 25%, #90caf9 75% 100%)"
         },
         borderRadius: 1,
       }}

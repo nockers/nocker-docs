@@ -1,11 +1,5 @@
 import { colors, createTheme, ThemeProvider } from "@mui/material"
-import {
-  createDefaultTheme,
-  Nocker,
-  NockerProvider,
-  WidgetConfig,
-  WidgetFab,
-} from "@nocker/mui"
+import { Nocker, NockerProvider, WidgetConfig, WidgetFab } from "@nocker/mui"
 import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
 import React, { FC, ReactNode } from "react"
 
@@ -63,6 +57,13 @@ const Root: FC<Props> = (props) => {
       "done",
     ],
     components: {
+      MuiFab: {
+        styleOverrides: {
+          root: {
+            textTransform: "none",
+          },
+        },
+      },
       MuiButton: {
         styleOverrides: {
           root: {
@@ -80,8 +81,6 @@ const Root: FC<Props> = (props) => {
     },
   })
 
-  const nockerTheme = createDefaultTheme(colorMode)
-
   const client = new Nocker({
     projectId: "wkLoRg1EBAq2fh1AFgXMO",
     environment: "PRODUCTION",
@@ -90,16 +89,15 @@ const Root: FC<Props> = (props) => {
 
   const widgetConfig: Partial<WidgetConfig> = {
     fabType: "TEXT_WITH_ICON",
-    fabText: "ご要望はこちら",
+    fabText: "Feedback",
+    isMinimal: true,
   }
 
   return (
     <ThemeProvider theme={theme}>
       {props.children}
       <NockerProvider client={client}>
-        <ThemeProvider theme={nockerTheme}>
-          <WidgetFab widgetConfig={widgetConfig} />
-        </ThemeProvider>
+        <WidgetFab widgetConfig={widgetConfig} />
       </NockerProvider>
     </ThemeProvider>
   )

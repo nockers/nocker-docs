@@ -1,0 +1,14 @@
+{
+  "link.item.label.プライバシー": {
+    "message": "プライバシー",
+    "description": "The label of footer link with label=プライバシー linking to /privacy"
+  },
+  "link.item.label.利用規約": {
+    "message": "利用規約",
+    "description": "The label of footer link with label=利用規約 linking to /terms"
+  },
+  "copyright": {
+    "message": "© 2022 Nocker",
+    "description": "The footer copyright"
+  }
+}

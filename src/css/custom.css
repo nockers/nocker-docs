@@ -10,6 +10,11 @@
 :root {
   --ifm-font-family-monospace: "M PLUS 1p", sans-serif;
   --ifm-font-family-base: "M PLUS 1p", sans-serif;
+  --ifm-navbar-shadow: "none";
+  --ifm-footer-background-color: transparent;
+  --ifm-container-width: 80rem;
+  --ifm-spacing-horizontal: 1rem;
+  --ifm-footer-padding-horizontal: 1rem;
   /* --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -33,12 +38,14 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 } */
 
-body {
-  overscroll-behavior: none;
+.footer,
+.menu__link {
+  font-weight: bold;
 }
 
-#__docusaurus {
-  overflow-x: hidden;
+body {
+  overscroll-behavior: none;
+  overflow-x: hidden !important;
 }
 
 a {

@@ -1,0 +1,40 @@
+---
+sidebar_position: 0
+---
+
+# はじめに
+
+Nockerは、フィードバックを送信する為のWebページ用のUIライブラリです。
+現在は、以下の4種類のウィジェットが利用可能です。
+
+- チケット
+- 5段階評価
+- 2段階評価
+- いいねボタン
+
+それに加えて、これらを組み合わせた2種類のウィジェットが存在します。
+
+- カード型
+- FAB型
+
+ウィジェットのサンプルは[Storybook](https://mui.storybook.nocker.dev/?path=/story/widget--default)で確認できます。
+
+import { BoxPreviewCard } from "@site/src/components/BoxPreviewCard"
+
+<BoxPreviewCard />
+
+## ライブラリ
+
+各プラットフォームに向けたUIライブラリを提供しています。
+
+- [HTML](/docs/widget/html) - Scriptタグで使用する静的なサイト向けのライブラリ
+- [JavaScript](/docs/widget/browser) - Webアプリ向けのライブラリ
+- [React](/docs/widget/react) - Reactコンポーネント
+- [React - mui](/docs/widget/react-mui) - muiのReactコンポーネント
+- ~~[React - Chakra UI](/docs/widget/react-chakra-ui) - Chakra UIのReactコンポーネント~~
+
+
+## Nocker API
+
+Nockerは送信されたフィードバックを管理する為のNockerAPIを提供しています。
+UIライブラリだけを用いることも、NockerAPI だけを使用することもできます。
