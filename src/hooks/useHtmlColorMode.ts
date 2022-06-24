@@ -3,7 +3,8 @@ import { useEffect, useState } from "react"
 
 export const useHtmlColorMode = () => {
   const [colorMode, setColorMode] = useState<"dark" | "light">(() => {
-    return getColorModeValue()
+    getColorModeValue()
+    return "light"
   })
 
   useEffect(() => {
