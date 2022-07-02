@@ -1,3 +1,99 @@
 # インストール
 
-5 minutes to learn the most important Docusaurus concepts.
+NpmからReactアプリ向けのライブラリ`@nocker/react`をインストールします。
+
+```bash
+$ yarn add @nocker/react @emotion/react @emotion/styled
+```
+
+このライブラリは現在`@emotion/react`と`@emotion/styled`に依存しています。
+
+## ウィジェットを試す
+
+Nockerには、複数のウィジェットが存在します。ここでは、そのうち`Widget`を用いて、カード型のウィジェットをレンダリングします。
+
+その他のウィジェットは[こちら](https://mui.storybook.nocker.dev/?path=/story/widget--default)で確認できます。
+
+```tsx
+import { Widget } from '@nocker/react'
+import "@nocker/react/style.css";
+
+const HomePage: FC = () => {
+  return (
+    <Widget />
+  )
+}
+```
+
+ユーザが送信したフォームの内容を取得するには、Widgetの`onSubmitTicket`にコールバック関数を渡します。
+
+```tsx
+import {
+  Widget,
+  type WidgetEmotionSubmit,
+  type WidgetTicketSubmit
+} from '@nocker/react'
+import "@nocker/react/style.css";
+
+const HomePage: FC = () => {
+  const onSubmitEmotion = (emotion: WidgetEmotionSubmit) => {
+    console.log(emotion)
+  }
+
+  const onSubmitTicket = (ticket: WidgetTicketSubmit) => {
+    console.log(ticket)
+  }
+
+  const onError = (error: Error) => {
+    console.error(error)
+  }
+
+  return (
+    <Widget
+      onSubmitEmotion={onSubmitEmotion}
+      onSubmitTicket={onSubmitTicket}
+      onError={onError}
+    />
+  )
+}
+```
+
+## NockerAPIと接続する
+
+Nockerはフィードバックを管理する為のNockerAPIを提供しています。
+NockerAPIを使用するには事前に[ログイン](https://nocker.app)とプロジェクトの作成が必要です。
+
+:::caution
+APIを使用しない場合はこのセクションは必要ありません。
+:::
+
+### プロジェクトを設定する
+
+上層のコンポーネントで`NockerProvider`を用いて、NockerのAPIと接続する為に必要なContextを作成します。
+この「projectId」はプロジェクトIDで管理画面で確認できます。
+
+```tsx
+import { Nocker, NockerProvider } from '@nocker/react'
+
+const Root: FC = () => {
+  const client = new Nocker({ projectId: "<YOUR_PROJECT_ID>" })
+
+  return (
+    <NockerProvider client={client}>
+      <App />
+    </NockerProvider>
+  )
+}
+```
+
+Knocker以外のAPIと接続する場合は`baseURL`を設定してください。
+
+```tsx
+import { Nocker } from '@nocker/react'
+
+const client = new Nocker({
+  projectId: "xxxxxxxxxxxxxxxxxxxxx",
+  environment: "PRODUCTION",
+  baseURL: "<YOUR_API_ENDPOINT>"
+})
+```

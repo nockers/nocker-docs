@@ -10,6 +10,12 @@
 :root {
   --ifm-font-family-monospace: "M PLUS 1p", sans-serif;
   --ifm-font-family-base: "M PLUS 1p", sans-serif;
+  /* --ifm-font-family-monospace: -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic",
+    "Segoe UI", Verdana, Meiryo, sans-serif;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic",
+    "Segoe UI", Verdana, Meiryo, sans-serif; */
   --ifm-navbar-shadow: "none";
   --ifm-footer-background-color: transparent;
   --ifm-container-width: 80rem;

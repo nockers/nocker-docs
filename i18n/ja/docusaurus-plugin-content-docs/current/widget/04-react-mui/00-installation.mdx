@@ -132,17 +132,7 @@ const theme = createTheme(mergedThemeOptions)
 
 ## フォントを設定する
 
-Nockerはデフォルトで「M PLUS 1p」を使用しています。Googleフォントを読み込むには`<link>`タグを追加してください。
-
-```html
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700&display=swap" rel="stylesheet">
-</head>
-```
-
-それ以外のフォントを使用する場合は`typography.fontFamily`を指定します。
+フォントを適用する場合は`typography.fontFamily`を指定します。
 
 ```tsx
 import { createTheme } from "@mui/material"

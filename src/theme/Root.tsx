@@ -25,7 +25,20 @@ const Root: FC<Props> = (props) => {
       },
     },
     typography: {
-      fontFamily: ["'M PLUS 1p'", "sans-serif"].join(","),
+      fontFamily: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Roboto",
+        "'Segoe UI semibold'",
+        "'Helvetica Neue'",
+        "HelveticaNeue",
+        "YuGothic",
+        "'Yu Gothic'",
+        "'Segoe UI'",
+        "Verdana",
+        "Meiryo",
+        "sans-serif",
+      ].join(","),
     },
     shape: { borderRadius: 10 },
     shadows: [

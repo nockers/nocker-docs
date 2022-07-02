@@ -13,7 +13,7 @@
 
 HTML5では`<script>`タグに`async`属性を追加することで、ライブラリを非同期で読み込み実行できます。HTMLのパースとDOMのレンダリングを止めない為に`async`属性を追加することをおすすめします。
 
-<iframe src="https://codesandbox.io/embed/nock-widget-fab-flthv9?fontsize=14&hidenavigation=1&module=%2Findex.html&theme=dark&view=editor"
+<iframe src="https://codesandbox.io/embed/nock-render-widget-qjxfxl?fontsize=14&hidenavigation=1&module=%2Findex.html&theme=dark&view=editor"
   style={{ width:"100%", height:"500px", border:0, borderRadius: "4px", overflow:"hidden" }}
   title="Nock widget-fab"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
@@ -88,22 +88,7 @@ onError|string|null|エラーが発生した時
 
 ## フォントを設定する
 
-Nockerはデフォルトで「M PLUS 1p」を使用しています。Googleフォントを読み込むには`<link>`タグを追加してください。
-
-```html
-<body>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700&display=swap" rel="stylesheet">
-  <script>
-    window.nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-    window.nock("renderWidgetFab")
-  </script>
-  <script async src="https://widget.nocker.app"></script>
-</body>
-```
-
-それ以外のフォントを使用する場合は`typography.fontFamily`を指定します。
+フォントを適用する場合は`typography.fontFamily`を指定します。
 
 ```html
 <body>
@@ -153,7 +138,7 @@ APIを使用しない場合はこのセクションは必要ありません。
 <body>
   <script>
     const nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-    nock("login", {
+    nock("init", {
       projectId: "<YOUR_PROJECT_ID>",
       environment: "PRODUCTION",
     })
@@ -169,7 +154,7 @@ Knocker以外のAPIと接続する場合は`baseURL`を設定してください�
 <body>
   <script>
     const nock = (a, b) => (nock.a = nock.a || []).push([a, b])
-    nock("login", {
+    nock("init", {
       projectId: "xxxxxxxxxxxxxxxxxxxxx",
       environment: "PRODUCTION",
       baseURL: "<YOUR_API_ENDPOINT>"

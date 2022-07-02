@@ -1,12 +1,12 @@
 import { Stack, Typography } from "@mui/material"
 import React, { FC } from "react"
 
-type WidgetType =
-  | "CARD"
-  | "TICKET"
-  | "EMOTION_FIVE"
-  | "EMOTION_HAND"
-  | "EMOTION_LIKE"
+// type WidgetType =
+//   | "CARD"
+//   | "TICKET"
+//   | "EMOTION_FIVE"
+//   | "EMOTION_HAND"
+//   | "EMOTION_LIKE"
 
 export const BoxHomeHowToUse: FC = () => {
   return (
@@ -19,10 +19,10 @@ export const BoxHomeHowToUse: FC = () => {
           fontSize: { xs: "2rem", sm: "3rem" },
         }}
       >
-        {"How to Integrate"}
+        {"Easy to Integrate"}
       </Typography>
       <iframe
-        src="https://codesandbox.io/embed/nock-widget-wvrduy?fontsize=14&hidenavigation=1&theme=dark"
+        src="https://codesandbox.io/embed/nocker-mui-widget-wqk03x?fontsize=14&hidenavigation=1&theme=dark"
         style={{
           width: "100%",
           height: "500px",
@@ -31,9 +31,13 @@ export const BoxHomeHowToUse: FC = () => {
           overflow: "hidden",
           display: "block",
         }}
-        title="Nock widget-fab"
-        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        title={"nock-render-widget"}
+        allow={
+          "accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        }
+        sandbox={
+          "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        }
       />
     </Stack>
   )
