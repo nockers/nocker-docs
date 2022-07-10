@@ -1,5 +1,11 @@
 import { colors, createTheme, ThemeProvider } from "@mui/material"
-import { Nocker, NockerProvider, WidgetConfig, WidgetFab } from "@nocker/mui"
+import {
+  createDefaultTheme,
+  Nocker,
+  NockerProvider,
+  WidgetConfig,
+  WidgetFab,
+} from "@nocker/mui"
 import { useHtmlColorMode } from "@site/src/hooks/useHtmlColorMode"
 import React, { FC, ReactNode } from "react"
 
@@ -25,20 +31,7 @@ const Root: FC<Props> = (props) => {
       },
     },
     typography: {
-      fontFamily: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Roboto",
-        "'Segoe UI semibold'",
-        "'Helvetica Neue'",
-        "HelveticaNeue",
-        "YuGothic",
-        "'Yu Gothic'",
-        "'Segoe UI'",
-        "Verdana",
-        "Meiryo",
-        "sans-serif",
-      ].join(","),
+      fontFamily: ['"M PLUS 1p"', "sans-serif"].join(","),
     },
     shape: { borderRadius: 10 },
     shadows: [
@@ -101,16 +94,19 @@ const Root: FC<Props> = (props) => {
   })
 
   const widgetConfig: Partial<WidgetConfig> = {
-    fabType: "TEXT_WITH_ICON",
-    fabText: "Feedback",
+    fabType: "DEFAULT",
     isMinimal: true,
   }
+
+  const widgetTheme = createDefaultTheme({ paletteMode: "light" })
 
   return (
     <ThemeProvider theme={theme}>
       {props.children}
       <NockerProvider client={client}>
-        <WidgetFab widgetConfig={widgetConfig} />
+        <ThemeProvider theme={widgetTheme}>
+          <WidgetFab widgetConfig={widgetConfig} />
+        </ThemeProvider>
       </NockerProvider>
     </ThemeProvider>
   )

@@ -30,7 +30,6 @@ export const BoxHomeHeader: FC = () => {
       component={"header"}
       sx={{ pt: 4, pb: 8, maxWidth: "80rem", mx: "auto" }}
       direction={{ xs: "column", md: "row" }}
-      alignItems={"center"}
     >
       <Stack spacing={4} sx={{ flex: { md: 1.5, lg: 1 }, width: "100%" }}>
         <Stack
@@ -46,16 +45,15 @@ export const BoxHomeHeader: FC = () => {
                 fontWeight: "bold",
                 fontSize: { xs: "2rem", sm: "3rem" },
                 whiteSpace: "pre-wrap",
-                color: "transparent",
-                letterSpacing: "2px",
-                background:
-                  "repeating-linear-gradient(90deg, #b39ddb 0 25%, #90caf9 75% 100%)",
-                backgroundClip: "text",
+                color: "black",
+                // color: "transparent",
+                // background: "repeating-linear-gradient(90deg, #b39ddb 0 25%, #90caf9 75% 100%)",
+                // backgroundClip: "text",
               }}
             >
               {"Feedback Widget\nfor Web/Flutter"}
             </Typography>
-            <Typography>
+            <Typography color={"text.secondary"}>
               <Translate>
                 {
                   "Nocker widget is a simple and easiest way to collect feedback from your customers on your app."
